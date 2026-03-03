@@ -46,7 +46,7 @@ class Database
             echo "Op dit moment kunnen we u niet helpen... probeer het later nog eens";
             header('Refresh:30; url=' .URLROOT . '/homepages/index');
         }
-    }
+}
 
     /** Deze method maakt de sql-query klaar voor gebruik */
     public function query($sql)

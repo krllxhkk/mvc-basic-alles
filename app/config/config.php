@@ -2,9 +2,9 @@
 /**
  * De database verbindingsgegevens
  */
-define('DB_HOST', '');
-define('DB_NAME', '');
-define('DB_USER', '');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'mvc_basics');
+define('DB_USER', 'root');
 define('DB_PASS', '');
 
 
@@ -17,3 +17,5 @@ define('URLROOT', 'http://www.mvc-basics.nl');
  * Het pad naar de folder app
  */
 define('APPROOT', dirname(dirname(__FILE__)));
+define('SITENAME', 'MVC Basics');
+?>
