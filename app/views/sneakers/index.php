@@ -24,9 +24,15 @@
                             <td><?= $sneaker->Model; ?></td>
                             <td><?= $sneaker->Type; ?></td>
                             <td><?= $sneaker->IsActief ? 'Ja' : 'Nee'; ?></td>
-                            <td><?= $sneaker->Omschrijving; ?></td>
+                            <td><?= $sneaker->Opmerking; ?></td>
                             <td><?= $sneaker->DatumAangemaakt; ?></td>
                             <td><?= $sneaker->DatumGewijzigd; ?></td>
+                            <td class="text-center">
+                        <a href="<?= URLROOT; ?>/SneakerController/delete/<?= $sneaker->Id; ?>"
+                            onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">
+                            <i class="bi bi-trash3-fill text-danger"></i>
+                        </a>
+                    </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

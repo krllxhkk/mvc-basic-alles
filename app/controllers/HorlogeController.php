@@ -1,12 +1,12 @@
 <?php
 
-class SmartphoneController extends BaseController
+class HorlogeController extends BaseController
 {
-    private $smartphoneModel;
+    private $horlogeModel;
 
     public function __construct()
     {
-        $this->smartphoneModel = $this->model('Smartphone');
+        $this->horlogeModel = $this->model('Horloge');
     }
 
     public function index($display = 'none', $message = '')
@@ -14,7 +14,7 @@ class SmartphoneController extends BaseController
         /**
          * Haal de resultaten van de model binnen
          */
-        $result = $this->smartphoneModel->getAllSmartphones();
+        $result = $this->horlogeModel->getAllHorloges();
 
         //var_dump($result);
 
@@ -22,7 +22,7 @@ class SmartphoneController extends BaseController
          * Het $data-array geeft informatie mee aan de view-pagina
          */
         $data = [
-            'title'  => 'Overzicht Smartphones',
+            'title'  => 'Overzicht Horloges',
             'display' => $display,
             'message' => $message,
             'result' => $result
@@ -32,14 +32,14 @@ class SmartphoneController extends BaseController
          * Met de view-method uit de BaseController-class wordt de view
          * aangeroepen
          */
-        $this->view('smartphones/index', $data);
+        $this->view('horloges/index', $data);
     }
 
     public function details($id)
     {
-        $result = $this->SmartphoneModel->delete($id);
+        $result = $this->horlogeModel->delete($id);
         
-        header('Refresh: 3; url=' . URLROOT . '/SmartphoneController/index');
+        header('Refresh:3; url=' . URLROOT . '/HorlogeController/index');
 
         $this->index('flex', 'Record is verwijderd');
     }

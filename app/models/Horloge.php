@@ -1,6 +1,6 @@
 <?php
 
-class Sneaker
+class Horloge
 {
     private $db;
 
@@ -9,28 +9,29 @@ class Sneaker
         $this->db = new Database();
     }
 
-    public function getAllSneakers()
+    public function getAllHorloges()
     {
         $sql = 'SELECT 
                     Id,
                     Merk,
                     Model,
-                    Type,
+                    Prijs,
                     IsActief,
-                    Opmerking,
-                    DatumAangemaakt,
-                    DatumGewijzigd
-                FROM Sneakers
+                    Omschrijving,
+                    DATE_FORMAT(DatumAangemaakt, "%d/%m/%Y") as DatumAangemaakt,
+                    DATE_FORMAT(DatumGewijzigd, "%d/%m/%Y") as DatumGewijzigd
+                FROM Horloges
                 ORDER BY Merk ASC';
 
         $this->db->query($sql);
 
         return $this->db->resultSet();
     }
+
     public function delete($id)
     {
         $sql = 'DELETE 
-                FROM Sneakers 
+                FROM Horloges 
                 WHERE Id = :id';
 
         $this->db->query($sql);

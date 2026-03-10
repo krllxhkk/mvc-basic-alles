@@ -3,7 +3,7 @@
  * De database verbindingsgegevens
  */
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'mvc_basics');
+define('DB_NAME', 'mvc_basics_2509ab');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
