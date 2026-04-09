@@ -35,6 +35,7 @@
                         <th>IsActief</th>
                         <th>Omschrijving</th>
                         <th>DatumAangemaakt</th>
+                        <th>Wijzig</th>
                         <th>Verwijder</th>
                     </tr>
                 </thead>
@@ -48,14 +49,16 @@
                         <td><?= $horloge->IsActief ? 'Ja' : 'Nee'; ?></td>
                         <td><?= $horloge->Omschrijving; ?></td>
                         <td><?= $horloge->DatumAangemaakt; ?></td>
+
                         <td class="text-center">
-                        <a href="<?= URLROOT; ?>/HorlogeController/update/<?= $horloge->Id; ?>">
-                            <i class="bi bi-pencil-square text-primary"></i>
-                        </a>
-                    </td>
+                            <a href="<?= URLROOT; ?>/HorlogeController/update/<?= $horloge->Id; ?>">
+                                <i class="bi bi-pencil-square text-primary"></i>
+                            </a>
+                        </td>
+
                         <td class="text-center">
                             <a href="<?= URLROOT; ?>/HorlogeController/delete/<?= $horloge->Id; ?>"
-                                onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">
+                               onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">
                                 <i class="bi bi-trash-fill text-danger"></i>
                             </a>
                         </td>
@@ -63,8 +66,8 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
-
-            <a href="<?= URLROOT; ?>/homepage/index" class="btn btn-primary">Terug</a>
+<a href="<?= URLROOT; ?>/homepages/index" class="btn btn-outline secondary">
+                <i class="bi bi-arrow-left"></i> Terug naar homepage</a>
         </div>
     </div>
 </div>

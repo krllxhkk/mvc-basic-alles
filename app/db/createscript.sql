@@ -174,3 +174,37 @@ VALUES
     ('Vacheron Constantin', 'Overseas Perpetual Calendar Ultra-Thin', 98000),
     ('Jaeger-LeCoultre', 'Reverso Tribute Duoface', 17000);
 ``
+
+CREATE TABLE RijksteZangeressen
+(
+    Id                SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    Naam              VARCHAR(100)      NOT NULL,
+    Land              VARCHAR(100)      NOT NULL,
+    Vermogen          DECIMAL(10,2)     NOT NULL,
+    Leeftijd          INT               NOT NULL,
+    AantalHits        INT               NOT NULL,
+    DebuutJaar        YEAR              NOT NULL,
+    IsActief          BIT               NOT NULL DEFAULT 1,
+    Opmerking         VARCHAR(255)      NULL,
+    DatumAangemaakt   DATETIME          NOT NULL DEFAULT NOW(),
+    DatumGewijzigd    DATETIME          NULL DEFAULT NOW(),
+    CONSTRAINT PK_Zangeressen_Id PRIMARY KEY (Id)
+) ENGINE=InnoDB;
+
+INSERT INTO RijksteZangeressen
+(
+    Naam,
+    Land,
+    Vermogen,
+    Leeftijd,
+    AantalHits,
+    DebuutJaar,
+    IsActief,
+    Opmerking
+)
+VALUES
+('Taylor Swift', 'Verenigde Staten', 1200000000.00, 35, 200, 2006, 1, 'Popster'),
+('Rihanna', 'Barbados', 1400000000.00, 37, 150, 2005, 1, 'Zangeres en zakenvrouw'),
+('Madonna', 'Verenigde Staten', 850000000.00, 66, 300, 1982, 1, 'Queen of Pop'),
+('Beyonce', 'Verenigde Staten', 800000000.00, 43, 220, 1997, 1, 'Wereldberoemd'),
+('Celine Dion', 'Canada', 550000000.00, 56, 180, 1981, 1, 'Legendarische stem');

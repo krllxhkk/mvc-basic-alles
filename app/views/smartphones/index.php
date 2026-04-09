@@ -67,8 +67,8 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-
-        <a href="<?= URLROOT; ?>/homepage/index" class="btn btn-primary">Terug</a>
+    <a href="<?= URLROOT; ?>/homepages/index" class="btn btn-outline secondary">
+                <i class="bi bi-arrow-left"></i> Terug naar homepage</a>
     </div>
 </div>
 </div>

@@ -69,9 +69,9 @@
 
                 <input type="hidden" name="id" value="<?= $_POST['id'] ?? $data['sneaker']->Id; ?>">
                 <button type="submit" class="btn btn-primary">Verstuur</button>
+                <a href="<?= URLROOT; ?>/homepages/index" class="btn btn-outline secondary">
+                <i class="bi bi-arrow-left"></i> Terug naar homepage</a>
             </form>
-
-            <a href="<?= URLROOT; ?>/homepage/index"><i class="bi bi-arrow-left"></i></a>
         </div>
     </div>
 </div>

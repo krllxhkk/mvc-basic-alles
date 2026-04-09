@@ -1,4 +1,4 @@
-<?php require_once APPROOT . '/views/includes/footer.php'; ?> -->
+
 
 <?php require_once APPROOT . '/views/includes/header.php'; ?>
 
@@ -67,10 +67,8 @@
                 </tbody>
             </table>
 
-            <a href="<?= URLROOT; ?>/homepage/index" class="btn btn-primary">
-                Terug
-            </a>
-        </div>
+           <a href="<?= URLROOT; ?>/homepages/index" class="btn btn-outline secondary">
+                <i class="bi bi-arrow-left"></i> Terug naar homepage</a>
     </div>
 </div>
 

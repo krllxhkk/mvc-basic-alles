@@ -67,7 +67,10 @@
                 <button type="submit" class="btn btn-primary">Verstuur</button>
             </form>
 
-            <a href="<?= URLROOT; ?>/homepage/index"><i class="bi bi-arrow-left"></i></a>
+              <div class="d-flex justify-content-between mt-3 mb-5">
+                <button type="submit" class="btn btn-primary">Verstuur</button>
+            <a href="<?= URLROOT; ?>/homepages/index" class="btn btn-outline secondary">
+                <i class="bi bi-arrow-left"></i> Terug naar homepage</a>
         </div>
     </div>
 </div>
